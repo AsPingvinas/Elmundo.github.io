@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Online Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <style>
+                .logo {
+                    display: flex;
+                    align-items: center;
+                }
+
+                .logo img {
+                    margin-right: 10px;
+                }
+            </style>
+            <img src="tipas.png" alt="Logo" style="height: 50px;">
+            <h1>ElMundo</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="cart-menu" class="cart-menu">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button id="close-cart" class="close-cart">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-items"></div>
+        <div id="cart-total" class="cart-total"></div>
+        <button id="checkout-button" class="checkout-button">Checkout</button>
+    </div>
+    
+    
+
+    <div class="medium-logo">
+        <img src="logotipas.png" alt="Medium Logo" style="width: 300px; height: auto; display: block; margin: 20px auto;">
+    </div>
+    <!-- Sliding Cart Menu -->
+    <div id="cart-menu" class="cart-menu">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+        </div>
+        <div id="cart-items" class="cart-items"></div>
+        <div id="cart-total" class="cart-total"></div>
+        <button id="checkout-button" class="checkout-button">Checkout</button>
+    </div>
+    
+    <section class="scrolling-photos">
+        <h2>MEGA PASIULYMAI</h2>
+        <div class="scroll-container">
+            <div class="scroll-item"><img src="a.png" alt="Commercial A"></div>
+            <div class="scroll-item"><img src="c.png" alt="Commercial C"></div>
+            <div class="scroll-item"><img src="New-Project.png" alt="Commercial New Project"></div>
+            <div class="scroll-item"><img src="e.png" alt="Commercial Oba"></div>
+            <div class="scroll-item"><img src="kkk.png" alt="Commercial Obba"></div>
+        </div>
+    </section>
+
+    
+    <footer>
+        <p>&copy; 2025 ElMundo. All Rights Reserved.</p>
+    </footer>
+    <script>
+        // Configuration for the slideshow
+        const config = {
+            images: ["a.png", "c.png", "New-Project.png", "e.png", "kkk.png"],
+            interval: 5000 // 5 seconds
+        };
+    
+        // Slideshow logic
+        const scrollContainer = document.querySelector('.scroll-container');
+        let currentIndex = 0;
+    
+        function showNextImage() {
+            // Move to the next image
+            currentIndex = (currentIndex + 1) % config.images.length;
+    
+            // Update the scroll position
+            scrollContainer.scrollTo({
+                left: currentIndex * scrollContainer.offsetWidth,
+                behavior: 'smooth'
+            });
+        }
+    
+        // Set up the interval for automatic scrolling
+        setInterval(showNextImage, config.interval);
+    </script>
+    
+</body>
+</html>
