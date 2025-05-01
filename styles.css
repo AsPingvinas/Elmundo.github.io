@@ -58,15 +58,18 @@ header nav ul li a {
 
 .product-card {
     background-color: #f9f9f9;
-    width: 250px;
-    padding: 15px;
-    margin-bottom: 20px;
+    width: 500px; /* Increased width */
+    height: 400px; /* Increased height */
+    padding: 15px; /* Adjusted padding */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .product img {
-    width: 100%;
+    width: 200%;
     height: auto;
     max-height: 200px; /* Increased max height for images */
     object-fit: contain;
